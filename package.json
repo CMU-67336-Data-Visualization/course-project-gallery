@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "start": "live-server",
+    "deploy": "gh-pages -d ."
+  },
+  "homepage": "https://CMU-67336-Data-Visualization.github.io/course-project-gallery",
+  "dependencies": {
+    "puppeteer": "^24.1.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
