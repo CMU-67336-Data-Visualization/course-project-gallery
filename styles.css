@@ -1,3 +1,40 @@
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0; /* Removes default margins */
+}
+
+/* Apply flexbox to the entire page */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body covers the full viewport height */
+    margin: 0; /* Remove default body margins */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    background: linear-gradient(to bottom, #f9f9f9, #ffffff);
+    color: #333;
+}
+
+/* Main content grows to fill available space */
+main {
+    flex: 1; /* Allows the main content to take up remaining space */
+}
+
+/* Footer styling */
+footer {
+    text-align: center; /* Center the text */
+    padding: 10px 0;
+    background-color: #f1f1f1; /* Optional: Light background color */
+    border-top: 1px solid #ddd; /* Optional: Top border for separation */
+}
+
 /* Default styles for larger screens */
 .gallery {
     display: grid;
@@ -41,5 +78,28 @@
 @media (max-width: 480px) {
     .gallery {
         grid-template-columns: 1fr; /* 1 card per row */
+    }
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+a:hover {
+    color: #007BFF; /* Add a distinct hover color */
+    text-decoration: underline;
+}
+
+.card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
