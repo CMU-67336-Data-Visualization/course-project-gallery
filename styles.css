@@ -1,6 +1,7 @@
+/* Default styles for larger screens */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusts the number of columns */
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row by default */
     gap: 20px; /* Space between cards */
     padding: 20px;
     justify-items: center; /* Centers the cards within their columns */
@@ -27,4 +28,18 @@
 .card h2 {
     margin: 10px 0;
     font-size: 1.1em; /* Adjusted font size for smaller cards */
+}
+
+/* Medium screens (tablets): 2 cards per row */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    }
+}
+
+/* Small screens (mobile): 1 card per row */
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr; /* 1 card per row */
+    }
 }
