@@ -1,0 +1,30 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusts the number of columns */
+    gap: 20px; /* Space between cards */
+    padding: 20px;
+    justify-items: center; /* Centers the cards within their columns */
+}
+
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 90%; /* Limits the card width */
+    max-width: 300px; /* Ensures cards aren't too wide */
+}
+
+.card img {
+    max-width: 100%;
+    border-bottom: 1px solid #ddd;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card h2 {
+    margin: 10px 0;
+    font-size: 1.1em; /* Adjusted font size for smaller cards */
+}
